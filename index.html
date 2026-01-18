@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharma Dairy & Veg | Pure. Fresh. Trusted.</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="glass" style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1rem;">
+            <div class="logo">
+                <h2>Dharma <span style="color: var(--accent-gold);">Dairy & Veg</span></h2>
+                <p style="font-size: 0.75rem; margin: 0; font-family: 'Inter', sans-serif; color: var(--text-light);">
+                    Pure. Fresh. Trusted.</p>
+            </div>
+            <nav class="desktop-nav">
+                <a href="index.html" style="margin-right: 20px;">Home</a>
+                <a href="products.html" style="margin-right: 20px;">Products</a>
+                <a href="about.html" style="margin-right: 20px;">About</a>
+                <a href="special.html" style="margin-right: 20px;">Special</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" style="margin-left: 20px;">Login</a>
+            </nav>
+            <div class="actions">
+                <span class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <a href="cart.html" style="margin-left: 20px;"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 80px;">
+        <!-- Hero Section -->
+        <section class="hero"
+            style="height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(255,255,255,0.6), rgba(232,245,233,0.7)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1600'); background-size: cover; background-position: center;">
+            <div class="container">
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Pure Dairy & Fresh Greens for Palanpur.</h1>
+                <p
+                    style="font-size: 1.2rem; margin-bottom: 30px; color: var(--text-light); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Experience farm-fresh A2 milk, paneer, and seasonal vegetables delivered straight to your doorstep
+                    every morning.
+                </p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/917359867349" class="btn btn-primary"
+                        style="background-color: var(--primary-green); color: white;"><i class="fab fa-whatsapp"></i>
+                        Order on WhatsApp</a>
+                    <a href="#fresh-list" class="btn"
+                        style="background: transparent; color: var(--primary-green); border: 2px solid var(--primary-green);">View
+                        Today’s Fresh List</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fresh List Section -->
+        <section id="fresh-list" style="padding: 60px 0; background: var(--white);">
+            <div class="container" style="max-width: 800px;">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Today's Fresh List</h2>
+                    <p id="fresh-date" style="color: var(--text-light);">📅 Date: <!-- date will appear here --> | 🚚
+                        Delivered usually within 2 hours</p>
+                    <script>
+                        // Set today's date in DD/MM/YYYY format
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var today = new Date();
+                            var dd = String(today.getDate()).padStart(2, '0');
+                            var mm = String(today.getMonth() + 1).padStart(2, '0');
+                            var yyyy = today.getFullYear();
+                            var dateStr = dd + '/' + mm + '/' + yyyy;
+                            document.getElementById('fresh-date').innerHTML = '📅 Date: ' + dateStr + ' | 🚚 Delivered usually within 2 hours';
+                        });
+                    </script>
+                </div>
+
+                <div class="fresh-list-container"
+                    style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
+
+                    <!-- Dairy Table -->
+                    <div style="padding: 20px; border-bottom: 1px solid #eee;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 15px;"><i class="fas fa-wine-bottle"></i>
+                            Dairy Essentials</h3>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #eee; text-align: left; color: var(--text-light); font-size: 0.9rem;">
+                                    <th style="padding-bottom: 10px;">Item</th>
+                                    <th style="padding-bottom: 10px; text-align: right;">Price</th>
+                                    <th style="padding-bottom: 10px; text-align: right;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #f0f0f0;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🥛 A2 Cow Milk</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹70 / Litre</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🐃 Buffalo Milk</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹80 / Litre</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #ed6c02; background: #fff3e0; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Selling Fast</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🧀 Fresh Paneer</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹320 / kg</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🥣 Fresh Curd</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹40 / 500g</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🥤 Butter Milk</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹20 / 500ml</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px 0; font-weight: 500;">🧈 Desi Ghee</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹900 / Litre</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #d32f2f; background: #ffebee; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Low Stock</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Veg Table -->
+                    <div style="padding: 20px; background: #fafafa;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 15px;"><i class="fas fa-carrot"></i> Farm
+                            Fresh Veggies</h3>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #eee; text-align: left; color: var(--text-light); font-size: 0.9rem;">
+                                    <th style="padding-bottom: 10px;">Item</th>
+                                    <th style="padding-bottom: 10px; text-align: right;">Price</th>
+                                    <th style="padding-bottom: 10px; text-align: right;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🍅 Tomatoes (Desi)</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹40 / kg</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🥔 Potatoes (New)</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹30 / kg</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🧅 Onions</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹35 / kg</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #ed6c02; background: #fff3e0; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Fast Moving</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🌶️ Green Chilli</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹20 / 250g</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🫚 Ginger</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹20 / 100g</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🧄 Garlic</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹30 / 250g</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🌿 Coriander</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹15 / Bunch</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #d32f2f; background: #ffebee; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Low Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🍋 Lemon</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹10 / 3pcs</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px 0; font-weight: 500;">🥬 Spinach (Palak)</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹20 / bunch</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px 0; font-weight: 500;">🥒 Cucumbers</td>
+                                    <td style="padding: 12px 0; text-align: right; font-weight: 600;">₹40 / kg</td>
+                                    <td style="padding: 12px 0; text-align: right;"><span style="color: #2e7d32; background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">In Stock</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div
+                        style="padding: 15px; background: #e8f5e9; text-align: center; font-size: 0.9rem; color: var(--primary-green);">
+                        <i class="fas fa-info-circle"></i> Stock sourced early morning. Limited availability.
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="https://wa.me/917359867349?text=Hi,%20I%20want%20to%20order%20from%20the%20Fresh%20List"
+                        class="btn btn-primary">Order These Items</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section style="padding: 80px 0; background: var(--white);">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">Featured Products</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                    <!-- Product Card 1 -->
+                    <div class="card product-card"
+                        style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-glass-whiskey" style="font-size: 80px; color: var(--primary-green);"></i>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Fresh Milk</h3>
+                            <p style="color: var(--text-light); margin-bottom: 15px;">Pure, farm-fresh milk delivered
+                                daily</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span
+                                    style="font-size: 1.5rem; font-weight: 600; color: var(--primary-green);">₹60/L</span>
+                                <a href="products.html" class="btn btn-primary"
+                                    style="padding: 8px 20px; font-size: 0.9rem;">View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="card product-card"
+                        style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-cheese" style="font-size: 80px; color: #F57C00;"></i>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Fresh Paneer</h3>
+                            <p style="color: var(--text-light); margin-bottom: 15px;">Soft, homemade cottage cheese</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span
+                                    style="font-size: 1.5rem; font-weight: 600; color: var(--primary-green);">₹80/250g</span>
+                                <a href="products.html" class="btn btn-primary"
+                                    style="padding: 8px 20px; font-size: 0.9rem;">View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="card product-card"
+                        style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, #E8F5E9 0%, #A5D6A7 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-carrot" style="font-size: 80px; color: #FF6F00;"></i>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Organic Vegetables</h3>
+                            <p style="color: var(--text-light); margin-bottom: 15px;">Fresh from our organic farms</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span
+                                    style="font-size: 1.5rem; font-weight: 600; color: var(--primary-green);">₹40/kg</span>
+                                <a href="products.html" class="btn btn-primary"
+                                    style="padding: 8px 20px; font-size: 0.9rem;">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section style="padding: 80px 0; background: var(--light-green);">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">Why Choose Dharma Dairy?</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                    <div class="slide-up" style="text-align: center;">
+                        <div
+                            style="width: 80px; height: 80px; background: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-leaf" style="font-size: 35px; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">100% Organic</h3>
+                        <p style="color: var(--text-light);">All our products are certified organic and chemical-free
+                        </p>
+                    </div>
+
+                    <div class="slide-up stagger-1" style="text-align: center;">
+                        <div
+                            style="width: 80px; height: 80px; background: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-truck" style="font-size: 35px; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Daily Delivery</h3>
+                        <p style="color: var(--text-light);">Fresh products delivered to your doorstep every morning</p>
+                    </div>
+
+                    <div class="slide-up stagger-2" style="text-align: center;">
+                        <div
+                            style="width: 80px; height: 80px; background: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-certificate" style="font-size: 35px; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Quality Assured</h3>
+                        <p style="color: var(--text-light);">Rigorous quality checks ensure premium standards</p>
+                    </div>
+
+                    <div class="slide-up stagger-3" style="text-align: center;">
+                        <div
+                            style="width: 80px; height: 80px; background: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-heart" style="font-size: 35px; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Made with Love</h3>
+                        <p style="color: var(--text-light);">Traditional methods with care and dedication</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section style="padding: 80px 0; background: var(--white);">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">What Our Customers Say</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="card" style="background: var(--light-green); padding: 30px; border-radius: 15px;">
+                        <div style="color: var(--accent-gold); font-size: 2rem; margin-bottom: 15px;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 20px; color: var(--text-dark);">"The milk quality
+                            is exceptional! You can really taste the difference. My family loves it."</p>
+                        <div style="font-weight: 600; color: var(--primary-green);">- Priya Sharma</div>
+                    </div>
+
+                    <div class="card" style="background: var(--light-green); padding: 30px; border-radius: 15px;">
+                        <div style="color: var(--accent-gold); font-size: 2rem; margin-bottom: 15px;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 20px; color: var(--text-dark);">"Fresh vegetables
+                            every morning! The delivery service is prompt and reliable."</p>
+                        <div style="font-weight: 600; color: var(--primary-green);">- Rajesh Kumar</div>
+                    </div>
+
+                    <div class="card" style="background: var(--light-green); padding: 30px; border-radius: 15px;">
+                        <div style="color: var(--accent-gold); font-size: 2rem; margin-bottom: 15px;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 20px; color: var(--text-dark);">"Best paneer in
+                            town! Soft, fresh, and perfect for all our recipes."</p>
+                        <div style="font-weight: 600; color: var(--primary-green);">- Anjali Patel</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section
+            style="padding: 80px 0; background: linear-gradient(135deg, var(--primary-green) 0%, #1B5E20 100%); color: white; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: white;">Ready to Experience Pure Freshness?
+                </h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Join thousands of happy customers
+                    enjoying farm-fresh products daily</p>
+                <a href="products.html" class="btn"
+                    style="background: var(--accent-gold); color: var(--text-dark); padding: 15px 40px; font-size: 1.1rem;">Start
+                    Shopping</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--text-dark); color: white; padding: 50px 0 20px;">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Dharma Dairy & Veg</h3>
+                    <p style="opacity: 0.8; line-height: 1.8;">Your trusted source for pure, fresh dairy products and
+                        organic vegetables. Farm to table, with love.</p>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--accent-gold); margin-bottom: 20px;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="index.html"
+                                style="color: white; opacity: 0.8;">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="products.html"
+                                style="color: white; opacity: 0.8;">Products</a></li>
+                        <li style="margin-bottom: 10px;"><a href="about.html" style="color: white; opacity: 0.8;">About
+                                Us</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html"
+                                style="color: white; opacity: 0.8;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--accent-gold); margin-bottom: 20px;">Contact Us</h4>
+                    <p style="opacity: 0.8; margin-bottom: 10px;"><i class="fas fa-phone"></i> +91 73598 67349</p>
+                    <p style="opacity: 0.8; margin-bottom: 10px;"><i class="fas fa-envelope"></i>
+                        info@dharmadairy&veg.com
+                    </p>
+                    <p style="opacity: 0.8; margin-bottom: 10px;"><i class="fas fa-map-marker-alt"></i> Palanpur,
+                        Banaskantha, Gujarat, India</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" style="color: var(--accent-gold); font-size: 1.5rem; margin-right: 15px;"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--accent-gold); font-size: 1.5rem; margin-right: 15px;"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--accent-gold); font-size: 1.5rem;"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.6;">
+                <p>&copy; 2024 Dharma Dairy & Veg. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
